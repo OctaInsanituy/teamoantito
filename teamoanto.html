@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Te amo ANTO</title>
+  <style>
+    :root{
+      --violet:#8A2BE2;
+      --blue:#1E90FF;
+      --bg1:#FFF7F0;
+      --bg2:#FFE4F0;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      background: radial-gradient(circle at 10% 20%, #FFFBF0 0%, #FFDDE6 20%, #E8F8FF 60%, #F0F7FF 100%);
+      overflow:hidden;
+    }
+
+    .card{
+      text-align:center;
+      padding:3rem 2rem;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(20,20,40,0.12);
+      backdrop-filter: blur(6px);
+      background: linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4));
+      max-width:900px;
+      width:90%;
+    }
+
+    h1{
+      font-size:clamp(2.2rem,6vw,6rem);
+      line-height:1;
+      margin-bottom:0.6rem;
+      letter-spacing:1px;
+      font-weight:800;
+      background: linear-gradient(90deg, var(--violet), var(--blue));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-transform:none;
+      display:inline-block;
+      padding:0.2rem 0.6rem;
+      border-radius:12px;
+    }
+
+    .small{
+      font-size:1.2rem;
+      margin-bottom:1rem;
+      color:#333;
+      opacity:0.9;
+    }
+
+    /* specifically style the word ANTO in uppercase and with stronger violet/blue */
+    .highlight{
+      display:inline-block;
+      font-weight:900;
+      text-transform:uppercase;
+      font-size:1.05em;
+      background: linear-gradient(90deg, var(--violet) 0%, var(--blue) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color:transparent;
+    }
+
+    /* confetti dots */
+    .dot{
+      position:fixed;
+      width:14px;height:14px;border-radius:50%;
+      mix-blend-mode:screen;opacity:0.95;
+      animation:float 6s linear infinite;
+    }
+    @keyframes float{
+      0%{transform:translateY(-20vh) rotate(0deg);opacity:1}
+      50%{opacity:0.9}
+      100%{transform:translateY(120vh) rotate(360deg);opacity:0}
+    }
+
+    /* footer note */
+    .footer{
+      margin-top:1rem;font-size:0.9rem;color:#555;
+    }
+
+    /* responsive spacing */
+    @media (max-width:520px){
+      .card{padding:2rem}
+      h1{font-size:clamp(1.8rem,10vw,3.6rem)}
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="small">Para la persona que ilumina mis días</div>
+    <h1>te amo <span class="highlight">ANTO</span></h1>
+    <div class="footer">Con todo mi cariño 💜💙</div>
+  </div>
+
+  <!-- confetti elements (random positions) -->
+  <div class="dot" style="left:6%;top:-10%;background:linear-gradient(45deg,#FF7AA2,#FFD76B);width:18px;height:18px;animation-duration:5s;"></div>
+  <div class="dot" style="left:20%;top:-5%;background:linear-gradient(45deg,#8A2BE2,#1E90FF);width:12px;height:12px;animation-duration:7s;"></div>
+  <div class="dot" style="left:34%;top:-12%;background:linear-gradient(45deg,#4DE8A6,#FFD76B);width:14px;height:14px;animation-duration:6s;"></div>
+  <div class="dot" style="left:50%;top:-8%;background:linear-gradient(45deg,#FF7AA2,#8A2BE2);width:16px;height:16px;animation-duration:5.5s;"></div>
+  <div class="dot" style="left:68%;top:-15%;background:linear-gradient(45deg,#1E90FF,#4DE8A6);width:12px;height:12px;animation-duration:8s;"></div>
+  <div class="dot" style="left:82%;top:-6%;background:linear-gradient(45deg,#FFD76B,#FF7AA2);width:18px;height:18px;animation-duration:6.5s;"></div>
+
+</body>
+</html>
